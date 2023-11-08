@@ -1,0 +1,42 @@
+@use "../base/theme";
+
+
+.main-nav-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 21px; /* pas marge car potentiel fusion des marges si tu le rajoutes */
+}
+.main-logo {
+  font-size: theme.$fs-33;
+  font-family: theme.$heading-font-antic;
+  color: theme.$main-white;
+  display: inline-block; // pour donner une taille après
+}
+.main-logo,
+.nav-phonenumber {
+  width: 175px; // partage d'espace, l'absolu passe, 
+  flex-shrink: 0;
+}
+.main-nav {
+  width: 100%;
+  text-align: center;
+}
+.main-nav a {
+  font-size: theme.$fs-16;
+  font-family: theme.$text-font-1-lato;
+  color: theme.$main-white;
+  margin: 0 16px;
+}
+.nav-phonenumber {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-phonenumber img {
+  width: theme.$fs-20;
+  margin-right: 7px;
+}
+.nav-phonenumber span {
+  font-family: theme.$text-font-1-lato;
+  color: theme.$main-white;
+}
