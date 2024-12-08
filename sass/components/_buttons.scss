@@ -1,12 +1,6 @@
-@use "../base/theme";
+@use "../components/mixins";
 
-@mixin golden-button($minWidth) {
-  min-width: #{$minWidth};
-  font-family: theme.$text-font-1-lato;
-  font-size: theme.$fs-18;
-  color: theme.$main-white;
-  background-color: theme.$dark-yellow;
-  padding: 9px;
+.c-gold-button {
+  @include mixins.button-aspect;
   border: none;
-  line-height: 133.333%;
 }

@@ -1,14 +1,15 @@
-// Fonts 
-$heading-font-antic: "Antic Didone";
-$text-font-1-lato: "Lato";
-$text-font-2-raleway: "Raleway";
+// Fonts
+$heading-antic-didone: "Antic Didone";
+$base-text-lato: "Lato";
+$base-text-raleway: "Raleway";
 
-// Palette 
-$dark-yellow: #B9923C;
-$main-white: #fff;
-$dark-black: #0C0E0D;
+// Palette
+$orange-main: #E78C15;
+$orange-dark: #7D4700;
+$white-main: #fff;
+$dark-black: #0c0e0d;
 
-// REM font-sizes 
+// REM font-sizes
 $fs-14: 0.875rem;
 $fs-16: 1rem;
 $fs-18: 1.125rem;
@@ -23,7 +24,8 @@ $fs-50: 3.125rem;
 $fs-60: 3.75rem;
 $fs-80: 5rem;
 
+// dimensions
+$table-sub-container: 600px;
 
-body {
-  font-family: $text-font-1-lato;
-}
+// breakpoints
+$lg-breakpoint: 1130px;

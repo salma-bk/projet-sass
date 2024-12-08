@@ -1,0 +1,114 @@
+@use "../base";
+@use "../layouts/navbar";
+@use "../layouts/footer";
+@use "../utils/classes";
+@use "../utils/typography";
+@use "../components/links";
+
+.menu-header {
+    block-size: 594px;
+    background-image: url("../assets/images/bg-menu-page.jpg");
+    background-size: cover;
+    padding-block-start: 240px;
+    &__main-title {
+      font-size: base.$fs-60;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 920px) {
+    .menu-header {
+      block-size: 300px;
+      padding-block-start: 125px;
+      &__main-title {
+        font-size: base.$fs-40;
+      }
+    }
+  }
+
+  /* Menu section */
+
+  .menu {
+    padding-block: 64px 176px;
+    &__container {
+        border: 1px solid base.$orange-dark;
+        padding-inline: 160px;
+        padding-block: 80px;
+    }
+    &__h2 {
+        font-family: base.$heading-antic-didone;
+        color: base.$orange-dark;
+        text-align: center;
+        margin-block-end: 42px;
+        font-size: base.$fs-24;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+    }
+    &__flex-dishes {
+        display: flex;
+        justify-content: center;
+    }
+    &__flex-dishes--spacing-bottom {
+        margin-block-end: 48px;
+    }
+    &__demarcation {
+        flex-shrink: 0;
+        margin-inline: 50px;
+        background-color: base.$orange-dark;
+        inline-size: 1px;
+    }
+  }
+
+  .dishes-list {
+    list-style: none;
+    text-align: center;
+    flex-shrink: 0;
+    inline-size: 250px;
+    &__dish-name {
+        font-family: base.$base-text-lato;
+        color: base.$dark-black;
+        font-size: base.$fs-18;
+        font-weight: 400;
+        line-height: 133.33%;
+        margin-block-end: 4px;
+    }
+    &__dish-description {
+        font-family: base.$base-text-lato;
+        font-weight: 300;
+        line-height: 128%;
+        margin-block-end: 16px;
+    }
+  }
+
+  @media (max-width: base.$lg-breakpoint) {
+    .menu {
+        padding-block: 0 127px;
+    
+    &__container {
+        margin-block-start: 16px;
+        padding-inline: 20px;
+        padding-block: 48px 127px;
+    }
+    &__h2 {
+        font-size: base.$fs-24;
+        margin-block-end: 24px;
+    }
+    &__flex-dishes {
+        flex-direction: column;
+        align-items: center;
+    }
+    &__demarcation {
+        display: none;
+    }
+    }
+
+    .dishes-list {
+        &__dish-name {
+            font-size: base.$fs-18;
+        }
+        &__dish-description {
+            font-size: base.$fs-14;
+        }
+    }
+  }
